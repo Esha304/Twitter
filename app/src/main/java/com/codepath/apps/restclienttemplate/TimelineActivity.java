@@ -79,7 +79,8 @@ import okhttp3.Headers;
      @Override
      public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.compose){
-            Toast.makeText(this, "Compose!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ComposeActivity.class);
+            startActivity(intent);
             return true;
         }
          return super.onOptionsItemSelected(item);
