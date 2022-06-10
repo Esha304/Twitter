@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 
 * [X] User is using **"Twitter branded" colors and styles**
 * [ ] User sees an **indeterminate progress indicator** when any background or network task is happening
-* [ ] User can **select "reply" from home timeline to respond to a tweet**
+* [x] User can **select "reply" from home timeline to respond to a tweet**
   * [ ] User that wrote the original tweet is **automatically "@" replied in compose**
 * [ ] User can tap a tweet to **open a detailed tweet view**
   * [ ] User can **take favorite (and unfavorite) or retweet** actions on a tweet
@@ -42,6 +42,9 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
+   * [X] Made an Action bar on the bottom.
+   * [X] User can go back to tweets from compose activity on clicking icon.
+   * [X] User can go to settings page by clicking icon.
 
 ## Video Walkthrough
 
