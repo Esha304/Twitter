@@ -8,4 +8,11 @@
 
         android:title="Compose"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menulogoutbtn"
+        android:icon="@drawable/logout_image"
+        android:onClick="onLogoutButton"
+        android:title="LogOut"
+        app:showAsAction="always" />
 </menu>

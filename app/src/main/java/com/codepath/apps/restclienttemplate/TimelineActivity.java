@@ -43,7 +43,8 @@ import okhttp3.Headers;
      RecyclerView rvTweets;
      List<Tweet> tweets;
      TweetsAdapter adapter;
-     private Button button;
+     Button logoutbtn;
+
      private EndlessRecyclerViewScrollListener scrollListener;
 
     @Override
@@ -81,13 +82,7 @@ import okhttp3.Headers;
                 android.R.color.holo_red_light);
 
 
-        button = (Button) findViewById(R.id.logoutbtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onLogoutButton();
-            }
-        });
+        logoutbtn = (Button) findViewById(R.id.menulogoutbtn);
 
         scrollListener = new EndlessRecyclerViewScrollListener(lln) {
             @Override
@@ -103,17 +98,6 @@ import okhttp3.Headers;
         // Adds the scroll listener to RecyclerView
         rvTweets.addOnScrollListener(scrollListener);
     }
-
-     void onLogoutButton() {
-         // forget who's logged in
-         TwitterApp.getRestClient(this).clearAccessToken();
-
-         // navigate backwards to Login screen
-         Intent i = new Intent(this, LoginActivity.class);
-         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this makes sure the Back button won't work
-         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // same as above
-         startActivity(i);
-     }
 
 
      @Override
@@ -166,5 +150,15 @@ import okhttp3.Headers;
                  Log.e(TAG, "onFailure!"+ response, throwable);
              }
          });
+     }
+
+     public void onLogoutButton(MenuItem item) {
+         TwitterApp.getRestClient(this).clearAccessToken();
+
+         // navigate backwards to Login screen
+         Intent i = new Intent(this, LoginActivity.class);
+         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this makes sure the Back button won't work
+         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // same as above
+         startActivity(i);
      }
  }

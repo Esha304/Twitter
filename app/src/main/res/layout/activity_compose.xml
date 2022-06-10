@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="What's happening?"
@@ -43,4 +44,24 @@
         android:text="@string/tweet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/characterCount" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="339dp"
+        android:background="@color/twitter_blue_fill_pressed"
+        app:layout_constraintTop_toBottomOf="@id/btnTweet">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/backToTweet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="338dp"
+        app:layout_constraintStart_toStartOf="@+id/tbToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/btnTweet"
+        app:srcCompat="@drawable/tweetspage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".TimelineActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/twitter_blue_fill_pressed"
+        app:layout_constraintTop_toBottomOf="@id/swipeContainer">
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/swipeContainer"-->
+<!--        app:menu="@menu/menu_toolbar" />-->
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
@@ -24,14 +41,12 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <Button
-        android:id="@+id/logoutbtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/twitter_blue_fill_pressed"
-        android:text="LOG OUT"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swipeContainer" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toStartOf="@+id/tbToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/swipeContainer"
+        app:srcCompat="@drawable/tweetspage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

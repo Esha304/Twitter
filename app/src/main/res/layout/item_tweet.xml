@@ -31,11 +31,10 @@
 
     <TextView
         android:id="@+id/tvBody"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
-        android:layout_marginRight="5dp"
         android:padding="1dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +58,43 @@
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="230dp"
+        android:layout_marginTop="5dp"
         android:text="itworks"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="@+id/ivImage"
-        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toEndOf="@+id/tvScreenName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/replyTweet"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        app:srcCompat="@drawable/reply_tweet" />
+
+    <ImageButton
+        android:id="@+id/likeTweet"
+        android:layout_width="30dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/replyTweet"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        app:srcCompat="@drawable/liketweet" />
+
+    <ImageButton
+        android:id="@+id/commentTweet"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:cropToPadding="false"
+        app:layout_constraintStart_toEndOf="@+id/likeTweet"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        app:srcCompat="@drawable/comment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
